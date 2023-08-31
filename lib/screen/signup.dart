@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:to_do_app/const/colors.dart';
+import 'package:to_do_app/data/auth_data.dart';
 
 class SignUp_Screen extends StatefulWidget {
   final VoidCallback show;
@@ -18,7 +19,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
 
   final email = TextEditingController();
   final password = TextEditingController();
-  final PasswordConfirm = TextEditingController();
+  final passwordConfirm = TextEditingController();
 
   @override
   void initState() {
@@ -51,7 +52,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
             const SizedBox(height: 10),
             textfield(password, _focusNode2, 'Password', Icons.password),
             const SizedBox(height: 10),
-            textfield(PasswordConfirm, _focusNode3, 'PasswordConfirm',
+            textfield(passwordConfirm, _focusNode3, 'PasswordConfirm',
                 Icons.password),
             const SizedBox(height: 8),
             account(),
@@ -97,20 +98,26 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
   Widget signup_bottom() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: Container(
-        alignment: Alignment.center,
-        width: double.infinity,
-        height: 50,
-        decoration: BoxDecoration(
-          color: custom_green,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: const Text(
-          'Sign Up',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 23,
-            fontWeight: FontWeight.bold,
+      child: GestureDetector(
+        onTap: () {
+          AuthenticationRemote()
+              .register(email.text, password.text, passwordConfirm.text);
+        },
+        child: Container(
+          alignment: Alignment.center,
+          width: double.infinity,
+          height: 50,
+          decoration: BoxDecoration(
+            color: custom_green,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: const Text(
+            'Sign Up',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 23,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

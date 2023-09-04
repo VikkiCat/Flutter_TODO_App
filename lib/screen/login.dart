@@ -6,7 +6,7 @@ import 'package:to_do_app/data/auth_data.dart';
 
 class LogIn_Screen extends StatefulWidget {
   final VoidCallback show;
-  LogIn_Screen(this.show, {super.key});
+  const LogIn_Screen(this.show, {super.key});
 
   @override
   State<LogIn_Screen> createState() => _LogIn_ScreenState();

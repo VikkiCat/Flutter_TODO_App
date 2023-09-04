@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:to_do_app/auth/auth_page.dart';
 
+import '../screen/home.dart';
+
 class Main_Page extends StatelessWidget {
   const Main_Page({super.key});
 

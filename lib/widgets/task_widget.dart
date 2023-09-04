@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:to_do_app/const/colors.dart';
 
@@ -14,7 +16,7 @@ class _Task_WidgetState extends State<Task_Widget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Container(
         width: double.infinity,
         height: 130,
@@ -139,6 +141,7 @@ class _Task_WidgetState extends State<Task_Widget> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget cover_image() {
     return Container(
       height: 130,

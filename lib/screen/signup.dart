@@ -95,6 +95,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget signup_bottom() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),

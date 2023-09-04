@@ -86,6 +86,7 @@ class _LogIn_ScreenState extends State<LogIn_Screen> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Widget login_bottom() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),

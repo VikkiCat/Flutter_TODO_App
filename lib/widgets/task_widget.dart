@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:to_do_app/const/colors.dart';
+import 'package:to_do_app/screen/edit_task.dart';
 
 class Task_Widget extends StatefulWidget {
   const Task_Widget({super.key});
@@ -103,28 +104,35 @@ class _Task_WidgetState extends State<Task_Widget> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 10),
-                          Container(
-                            width: 90,
-                            height: 28,
-                            decoration: BoxDecoration(
-                              color: const Color(0xffE2F6F1),
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 12, vertical: 6),
-                              child: Row(
-                                children: [
-                                  Image.asset('images/icon_edit.png'),
-                                  const SizedBox(width: 10),
-                                  const Text(
-                                    'edit',
-                                    style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
+                          SizedBox(width: 10),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Edit_Screen(),
+                              ));
+                            },
+                            child: Container(
+                              width: 90,
+                              height: 28,
+                              decoration: BoxDecoration(
+                                color: const Color(0xffE2F6F1),
+                                borderRadius: BorderRadius.circular(18),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 12, vertical: 6),
+                                child: Row(
+                                  children: [
+                                    Image.asset('images/icon_edit.png'),
+                                    const SizedBox(width: 10),
+                                    const Text(
+                                      'edit',
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),

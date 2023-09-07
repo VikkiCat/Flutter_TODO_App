@@ -3,9 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_app/const/colors.dart';
 import 'package:to_do_app/screen/edit_task.dart';
+import '../model/note_model.dart';
 
 class Task_Widget extends StatefulWidget {
-  const Task_Widget({super.key});
+  Note _note;
+  Task_Widget(this._note, {super.key});
 
   @override
   State<Task_Widget> createState() => _Task_WidgetState();
@@ -17,7 +19,7 @@ class _Task_WidgetState extends State<Task_Widget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Container(
         width: double.infinity,
         height: 130,
@@ -34,12 +36,12 @@ class _Task_WidgetState extends State<Task_Widget> {
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: EdgeInsets.symmetric(horizontal: 10),
           child: Row(
             children: [
               //image
               cover_image(),
-              const SizedBox(
+              SizedBox(
                 width: 20,
               ),
               // title and subtitle
@@ -47,12 +49,12 @@ class _Task_WidgetState extends State<Task_Widget> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
-                          'Title',
+                        Text(
+                          widget._note.title,
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold),
                         ),
@@ -66,9 +68,9 @@ class _Task_WidgetState extends State<Task_Widget> {
                         )
                       ],
                     ),
-                    const SizedBox(height: 5),
+                    SizedBox(height: 5),
                     Text(
-                      'Subtitle',
+                      widget._note.subtitle,
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
@@ -92,9 +94,9 @@ class _Task_WidgetState extends State<Task_Widget> {
                               child: Row(
                                 children: [
                                   Image.asset('images/icon_time.png'),
-                                  const SizedBox(width: 10),
-                                  const Text(
-                                    'time',
+                                  SizedBox(width: 10),
+                                  Text(
+                                    widget._note.time,
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 14,
@@ -124,8 +126,8 @@ class _Task_WidgetState extends State<Task_Widget> {
                                 child: Row(
                                   children: [
                                     Image.asset('images/icon_edit.png'),
-                                    const SizedBox(width: 10),
-                                    const Text(
+                                    SizedBox(width: 10),
+                                    Text(
                                       'edit',
                                       style: TextStyle(
                                           fontSize: 14,
@@ -149,15 +151,15 @@ class _Task_WidgetState extends State<Task_Widget> {
     );
   }
 
-  // ignore: non_constant_identifier_names
   Widget cover_image() {
     return Container(
       height: 130,
       width: 100,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.amber,
         image: DecorationImage(
-            image: AssetImage('images/1.png'), fit: BoxFit.cover),
+            image: AssetImage('images/${widget._note.image_index}.png'),
+            fit: BoxFit.cover),
       ),
     );
   }

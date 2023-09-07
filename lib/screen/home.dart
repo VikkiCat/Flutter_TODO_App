@@ -1,9 +1,11 @@
 // ignore_for_file: camel_case_types
 
 //import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:to_do_app/const/colors.dart';
+import 'package:to_do_app/data/firestor.dart';
 import 'package:to_do_app/screen/add_note_screen.dart';
 import 'package:to_do_app/widgets/task_widget.dart';
 
@@ -48,12 +50,22 @@ class _Home_ScreenState extends State<Home_Screen> {
           }
           return true;
         },
-        child: ListView.builder(
-          itemBuilder: (context, index) {
-            return const Task_Widget();
-          },
-          itemCount: 10,
-        ),
+        child: StreamBuilder<QuerySnapshot>(
+            stream: Firestore_Datasource().stream(),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) {
+                return CircularProgressIndicator();
+              }
+              final notesList = Firestore_Datasource().getNotes(snapshot);
+              return ListView.builder(
+                itemBuilder: (context, index) {
+                  final note = notesList[index];
+
+                  return Task_Widget(note);
+                },
+                itemCount: notesList.length,
+              );
+            }),
       )),
     );
   }

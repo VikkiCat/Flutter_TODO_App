@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:to_do_app/const/colors.dart';
+import 'package:to_do_app/data/firestor.dart';
 import 'package:to_do_app/screen/edit_task.dart';
 import '../model/note_model.dart';
 
@@ -13,11 +14,10 @@ class Task_Widget extends StatefulWidget {
   State<Task_Widget> createState() => _Task_WidgetState();
 }
 
-bool isDone = false;
-
 class _Task_WidgetState extends State<Task_Widget> {
   @override
   Widget build(BuildContext context) {
+    bool isDone = widget._note.isDone;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Container(
@@ -64,6 +64,8 @@ class _Task_WidgetState extends State<Task_Widget> {
                             setState(() {
                               isDone = !isDone;
                             });
+                            Firestore_Datasource()
+                                .isdone(widget._note.id, isDone);
                           },
                         )
                       ],

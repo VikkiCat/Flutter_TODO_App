@@ -4,6 +4,8 @@ class Note {
   String title;
   String time;
   int image_index;
+  bool isDone;
 
-  Note(this.id, this.subtitle, this.title, this.time, this.image_index);
+  Note(this.id, this.subtitle, this.title, this.time, this.image_index,
+      this.isDone);
 }

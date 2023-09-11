@@ -2,23 +2,33 @@
 
 import 'package:flutter/material.dart';
 import 'package:to_do_app/const/colors.dart';
+import 'package:to_do_app/data/firestor.dart';
+import 'package:to_do_app/model/note_model.dart';
 
 class Edit_Screen extends StatefulWidget {
-  const Edit_Screen({super.key});
+  Note _note;
+  Edit_Screen(this._note, {super.key});
 
   @override
   State<Edit_Screen> createState() => _Edit_ScreenState();
 }
 
 class _Edit_ScreenState extends State<Edit_Screen> {
-  final title = TextEditingController();
-  final subtitle = TextEditingController();
+  TextEditingController? title;
+  TextEditingController? subtitle;
 
   FocusNode _focusNode1 = FocusNode();
   FocusNode _focusNode2 = FocusNode();
 
   int indexx = 0;
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    title = TextEditingController(text: widget._note.title);
+    subtitle = TextEditingController(text: widget._note.subtitle);
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: backgraundColors,
@@ -48,6 +58,8 @@ class _Edit_ScreenState extends State<Edit_Screen> {
             minimumSize: Size(170, 48),
           ),
           onPressed: () {
+            Firestore_Datasource().Update_Note(
+                widget._note.id, indexx, title!.text, subtitle!.text);
             Navigator.pop(context);
           },
           child: Text('add task'),

@@ -31,7 +31,7 @@ class _Home_ScreenState extends State<Home_Screen> {
               builder: (context) => Add_Screen(),
             ));
           },
-          backgroundColor: custom_green,
+          backgroundColor: custom_purple,
           child: const Icon(Icons.add, size: 30),
         ),
       ),

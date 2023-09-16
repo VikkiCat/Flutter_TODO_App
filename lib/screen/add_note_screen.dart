@@ -45,24 +45,24 @@ class _Add_ScreenState extends State<Add_Screen> {
       children: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: custom_green,
-            minimumSize: Size(170, 48),
-          ),
-          onPressed: () {
-            Firestore_Datasource().AddNote(subtitle.text, title.text, indexx);
-            Navigator.pop(context);
-          },
-          child: Text('add task'),
-        ),
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
             primary: Colors.red,
             minimumSize: Size(170, 48),
           ),
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('cancel'),
+          child: Text('Cancel'),
+        ),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: custom_purple,
+            minimumSize: Size(170, 48),
+          ),
+          onPressed: () {
+            Firestore_Datasource().AddNote(subtitle.text, title.text, indexx);
+            Navigator.pop(context);
+          },
+          child: Text('Add task'),
         ),
       ],
     );
@@ -86,7 +86,7 @@ class _Add_ScreenState extends State<Add_Screen> {
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
                   width: 2,
-                  color: indexx == index ? custom_green : Colors.grey,
+                  color: indexx == index ? custom_purple : Colors.grey,
                 ),
               ),
               width: 140,
@@ -126,7 +126,7 @@ class _Add_ScreenState extends State<Add_Screen> {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: custom_green, width: 2.0),
+              borderSide: BorderSide(color: custom_purple, width: 2.0),
             ),
           ),
         ),
@@ -158,7 +158,7 @@ class _Add_ScreenState extends State<Add_Screen> {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: custom_green, width: 2.0),
+              borderSide: BorderSide(color: custom_purple, width: 2.0),
             ),
           ),
         ),

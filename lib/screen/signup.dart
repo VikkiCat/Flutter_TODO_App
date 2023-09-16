@@ -109,7 +109,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
           width: double.infinity,
           height: 50,
           decoration: BoxDecoration(
-            color: custom_green,
+            color: custom_purple,
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Text(
@@ -142,7 +142,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
             prefixIcon: Icon(
               iconss,
               color:
-                  focusNode.hasFocus ? custom_green : const Color(0xffc5c5c5),
+                  focusNode.hasFocus ? custom_purple : const Color(0xffc5c5c5),
             ),
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
@@ -154,7 +154,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: custom_green, width: 2.0),
+              borderSide: BorderSide(color: custom_purple, width: 2.0),
             ),
           ),
         ),

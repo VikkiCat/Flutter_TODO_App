@@ -87,7 +87,7 @@ class _Task_WidgetState extends State<Task_Widget> {
                             width: 90,
                             height: 28,
                             decoration: BoxDecoration(
-                              color: custom_green,
+                              color: custom_purple,
                               borderRadius: BorderRadius.circular(18),
                             ),
                             child: Padding(

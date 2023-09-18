@@ -158,7 +158,7 @@ class _Task_WidgetState extends State<Task_Widget> {
       height: 130,
       width: 100,
       decoration: BoxDecoration(
-        color: Colors.amber,
+        color: Colors.white,
         image: DecorationImage(
             image: AssetImage('images/${widget._note.image_index}.png'),
             fit: BoxFit.cover),

@@ -82,7 +82,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
     return Container(
       height: 180,
       child: ListView.builder(
-        itemCount: 6,
+        itemCount: 4,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return GestureDetector(
@@ -91,20 +91,23 @@ class _Edit_ScreenState extends State<Edit_Screen> {
                 indexx = index;
               });
             },
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  width: 2,
-                  color: indexx == index ? custom_purple : Colors.grey,
+            child: Padding(
+              padding: EdgeInsets.only(left: index == 0 ? 7 : 0),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    width: 2,
+                    color: indexx == index ? custom_purple : Colors.grey,
+                  ),
                 ),
-              ),
-              width: 140,
-              margin: EdgeInsets.all(8),
-              child: Column(
-                children: [
-                  Image.asset('images/${index}.png'),
-                ],
+                width: 140,
+                margin: EdgeInsets.all(8),
+                child: Column(
+                  children: [
+                    Image.asset('images/${index}.png'),
+                  ],
+                ),
               ),
             ),
           );

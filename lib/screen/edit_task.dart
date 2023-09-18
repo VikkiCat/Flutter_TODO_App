@@ -5,7 +5,9 @@ import 'package:to_do_app/const/colors.dart';
 import 'package:to_do_app/data/firestor.dart';
 import 'package:to_do_app/model/note_model.dart';
 
+// ignore: must_be_immutable
 class Edit_Screen extends StatefulWidget {
+  // ignore: prefer_final_fields
   Note _note;
   Edit_Screen(this._note, {super.key});
 

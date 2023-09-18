@@ -2,7 +2,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:to_do_app/auth/main_page.dart';
-import 'package:to_do_app/screen/add_note_screen.dart';
 import 'package:to_do_app/screen/home.dart';
 //import 'package:to_do_app/screen/add_note_screen.dart';
 //import 'package:to_do_app/auth/auth_page.dart';

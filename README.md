@@ -18,6 +18,14 @@ This repository contains a simple Flutter to-do app that utilizes Firebase for b
 
 ## Screenshots
 ### Log In Screen
-![](.\images\screenshots\LogIn.png)
+![LogIn](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/15ca59eb-b83f-4e3a-ac49-cf9d85dc2655)
 ### Sign Up Screen
-![](.\images\screenshots\SignUp.png)
+![SignUp](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/a618938e-d24e-47a2-87c1-8a9af3a00687)
+### Add Task Screen
+![Add_Task](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/3a4759fa-c71f-445b-a17e-5cd19c2faeb1)
+
+### Home Screen
+![Home_Screen](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/4a519fe4-aa1d-4759-b19f-c2bc10d684a1)
+
+### Edit Task Screen
+![Edit_Screen](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/5301a62c-ca8d-4095-bd9f-228cd5695a64)

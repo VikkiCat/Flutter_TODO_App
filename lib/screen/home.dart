@@ -61,7 +61,12 @@ class _Home_ScreenState extends State<Home_Screen> {
                 itemBuilder: (context, index) {
                   final note = notesList[index];
 
-                  return Task_Widget(note);
+                  return Dismissible(
+                      key: UniqueKey(),
+                      onDismissed: (direction) {
+                        Firestore_Datasource().delete_note(note.id);
+                      },
+                      child: Task_Widget(note));
                 },
                 itemCount: notesList.length,
               );

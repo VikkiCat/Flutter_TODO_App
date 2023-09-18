@@ -66,11 +66,12 @@ class Firestore_Datasource {
     }
   }
 
-  Stream<QuerySnapshot> stream() {
+  Stream<QuerySnapshot> stream(bool isDone) {
     return _firestore
         .collection('users')
         .doc(_auth.currentUser!.uid)
         .collection('notes')
+        .where('isDone', isEqualTo: isDone)
         .snapshots();
   }
 

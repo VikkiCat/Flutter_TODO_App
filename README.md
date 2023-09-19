@@ -1,8 +1,8 @@
-## Flutter To-Do App with Firebase
+# Flutter To-Do App with Firebase
 
 This repository contains a simple Flutter to-do app that utilizes Firebase for backend services. The app allows users to create, manage, and organize their to-do tasks seamlessly. Firebase is integrated for real-time data synchronization, authentication, and cloud storage.
 
-### Features
+## Features
 
 . User Authentication: The app supports user registration and authentication using Firebase Authentication.
 
@@ -18,14 +18,27 @@ This repository contains a simple Flutter to-do app that utilizes Firebase for b
 
 ## Screenshots
 ### Log In Screen
-![LogIn](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/15ca59eb-b83f-4e3a-ac49-cf9d85dc2655)
+![LogIn](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/acd413d3-d9cd-4ba3-9208-d61a4f682726)
+
 ### Sign Up Screen
-![SignUp](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/a618938e-d24e-47a2-87c1-8a9af3a00687)
+![SignUp](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/b6f24ef4-a5ff-4a53-81d3-74da67f4db62)
+
 ### Add Task Screen
-![Add_Task](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/5d36ee81-d92f-4be3-aa56-259f66239c13)
+![Add_Task](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/30561484-dfa3-4252-b049-c853ecfb754b)
 
 ### Home Screen
-![Home_Screen](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/8aa359a4-dc7c-4a90-9d39-20758b79dce8)
+![Home_Screen](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/bbaf7812-24f0-414e-b746-3d471c8ea74b)
+
+![Added_Task](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/d324b236-115a-4477-baea-bc9776e2ea82)
+
+![Home_isDone](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/e998e5e5-af3d-4a0d-816b-9228cdd4349e)
 
 ### Edit Task Screen
-![Edit_Screen](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/18950b04-07f6-4111-9eb7-a439a537f582)
+![Edit_Screen](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/5a37f026-ff23-465c-95ba-1eff99046656)
+
+### Delete Task Function
+![Delete_task](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/5ff0ae30-fd05-4cc2-93be-5ca074710399)
+
+Getting Started
+Clone the Repository
+As usual, you get started by cloning the project to your local machine:

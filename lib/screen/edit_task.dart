@@ -38,7 +38,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            /*Text(
               textAlign: TextAlign.start,
               "Editing task",
               style: TextStyle(
@@ -46,7 +46,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
-            ),
+            ),*/
             SizedBox(height: 60),
             title_widget(),
             SizedBox(height: 20),

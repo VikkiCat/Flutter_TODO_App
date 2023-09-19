@@ -2,6 +2,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:to_do_app/auth/main_page.dart';
+import 'package:to_do_app/screen/edit_task.dart';
+import 'package:to_do_app/screen/home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Main_Page(),
+      home: Home_Screen(),
     );
   }
 }

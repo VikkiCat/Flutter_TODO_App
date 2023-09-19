@@ -45,7 +45,8 @@ class _Add_ScreenState extends State<Add_Screen> {
       children: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: Colors.red,
+            backgroundColor: Colors.red,
+            //primary: Colors.red,
             minimumSize: Size(170, 48),
           ),
           onPressed: () {
@@ -55,7 +56,8 @@ class _Add_ScreenState extends State<Add_Screen> {
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: custom_purple,
+            backgroundColor: custom_purple,
+            //primary: custom_purple,
             minimumSize: Size(170, 48),
           ),
           onPressed: () {
@@ -72,7 +74,7 @@ class _Add_ScreenState extends State<Add_Screen> {
     return Container(
       height: 180,
       child: ListView.builder(
-        itemCount: 4,
+        itemCount: 6,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return GestureDetector(

@@ -1,14 +1,10 @@
 // ignore_for_file: camel_case_types
 
-//import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:to_do_app/const/colors.dart';
-import 'package:to_do_app/data/firestor.dart';
 import 'package:to_do_app/screen/add_note_screen.dart';
 import 'package:to_do_app/widgets/stream_note.dart';
-import 'package:to_do_app/widgets/task_widget.dart';
 
 class Home_Screen extends StatefulWidget {
   const Home_Screen({super.key});

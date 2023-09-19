@@ -74,7 +74,7 @@ class _LogIn_ScreenState extends State<LogIn_Screen> {
           GestureDetector(
             onTap: widget.show,
             child: const Text(
-              'Sign up',
+              'Sign Up',
               style: TextStyle(
                   color: Colors.blue,
                   fontSize: 14,
@@ -103,7 +103,7 @@ class _LogIn_ScreenState extends State<LogIn_Screen> {
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Text(
-            'LogIn',
+            'Log In',
             style: TextStyle(
               color: Colors.white,
               fontSize: 23,
@@ -160,7 +160,7 @@ class _LogIn_ScreenState extends State<LogIn_Screen> {
         height: 300,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/7.png'),
+            image: AssetImage('images/auth_image.png'),
             fit: BoxFit.cover,
           ),
         ),

@@ -52,7 +52,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
             const SizedBox(height: 10),
             textfield(password, _focusNode2, 'Password', Icons.password),
             const SizedBox(height: 10),
-            textfield(passwordConfirm, _focusNode3, 'PasswordConfirm',
+            textfield(passwordConfirm, _focusNode3, 'Confirm the password',
                 Icons.password),
             const SizedBox(height: 8),
             account(),
@@ -83,7 +83,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
           GestureDetector(
             onTap: widget.show,
             child: const Text(
-              'Login',
+              'Log In',
               style: TextStyle(
                   color: Colors.blue,
                   fontSize: 14,
@@ -170,7 +170,7 @@ class _SignUp_ScreenState extends State<SignUp_Screen> {
         height: 300,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/7.png'),
+            image: AssetImage('images/auth_image.png'),
             fit: BoxFit.cover,
           ),
         ),

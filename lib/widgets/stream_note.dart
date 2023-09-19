@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:to_do_app/data/firestor.dart';
@@ -22,11 +24,13 @@ class Stream_note extends StatelessWidget {
               final note = notesList[index];
 
               return Dismissible(
-                  key: UniqueKey(),
-                  onDismissed: (direction) {
-                    Firestore_Datasource().delete_note(note.id);
-                  },
-                  child: Task_Widget(note));
+                key: UniqueKey(),
+                onDismissed: (direction) {
+                  Firestore_Datasource().delete_note(note.id);
+                },
+                child: Task_Widget(note),
+                background: Container(color: Colors.red),
+              );
             },
             itemCount: notesList.length,
           );

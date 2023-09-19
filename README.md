@@ -2,19 +2,36 @@
 
 This repository contains a simple Flutter to-do app that utilizes Firebase for backend services. The app allows users to create, manage, and organize their to-do tasks seamlessly. Firebase is integrated for real-time data synchronization, authentication, and cloud storage.
 
+## Table of contents
+* [Technologies](#technologies)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+
+## Technologies
+Project is created with:
+* Dart vesrion: 3.1
+* Flutter version: 3.13.4
+* Firebase auth: 4.3.0
+* Cloud Firestore: 4.5.0
+
+Build and testing with:
+* Android Studio 2022 3.1.19
+* Android Emulator:  Google Pixel 7 API 33 Android 13 Tiramisu
+
 ## Features
 
-. User Authentication: The app supports user registration and authentication using Firebase Authentication.
+* User Authentication: The app supports user registration and authentication using Firebase Authentication.
 
-. Real-time Data Sync: To-do tasks are synchronized in real-time across multiple devices.
+* Real-time Data Sync: To-do tasks are synchronized in real-time across multiple devices.
 
-. Add and Edit Tasks: Users can add new tasks and edit existing ones with ease.
+* Add and Edit Tasks: Users can add new tasks and edit existing ones with ease.
 
-. Mark as Complete: Tasks can be marked as complete, and the app provides a visual indication for completed tasks.
+* Mark as Complete: Tasks can be marked as complete, and the app provides a visual indication for completed tasks.
 
-. Delete Tasks: Users can delete tasks they no longer need.
+* Delete Tasks: Users can delete tasks they no longer need.
 
-. Task Categories: Tasks can be organized into different categories or projects.
+* Task Categories: Tasks can be organized into different categories or projects.
 
 ## Screenshots
 ### Log In Screen
@@ -39,6 +56,10 @@ This repository contains a simple Flutter to-do app that utilizes Firebase for b
 ### Delete Task Function
 ![Delete_task](https://github.com/VikkiCat/Flutter_TODO_App/assets/33381663/5ff0ae30-fd05-4cc2-93be-5ca074710399)
 
-Getting Started
-Clone the Repository
+## Setup
+### Clone the Repository
 As usual, you get started by cloning the project to your local machine:
+``````
+https://github.com/VikkiCat/Flutter_TODO_App.git
+``````
+
